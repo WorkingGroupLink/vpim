@@ -1,8 +1,8 @@
 require 'ubygems'
 require 'pp'
 require 'rake'
-require './gemspec'
-require './lib/vpim/version'
+require_relative 'gemspec'
+require_relative 'lib/vpim/version'
 
 Gem::Specification.new do |s|
   info(s)
@@ -35,4 +35,3 @@ This is a pure-ruby library for decoding and encoding vCard and iCalendar data
 # s.add_dependency("plist")
 # s.autorequire       = "vpim"
 end
-
