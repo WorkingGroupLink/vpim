@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'pp'
-require 'rake'
+require_relative 'rake'
 require_relative 'gemspec'
 require_relative 'lib/vpim/version'
 
