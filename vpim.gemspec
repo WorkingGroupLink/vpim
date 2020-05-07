@@ -1,6 +1,5 @@
 require 'rubygems'
 require 'pp'
-require_relative 'rake'
 require_relative 'gemspec'
 require_relative 'lib/vpim/version'
 
@@ -33,4 +32,5 @@ This is a pure-ruby library for decoding and encoding vCard and iCalendar data
   s.require_path      = "lib"
 # s.add_dependency("plist")
 # s.autorequire       = "vpim"
+  s.add_development_dependency 'rake', '~> 13.0'
 end
