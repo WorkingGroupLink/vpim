@@ -13,24 +13,14 @@ This is a pure-ruby library for decoding and encoding vCard and iCalendar data
 ("personal information") called vPim.
 ---
   s.extra_rdoc_files  = ["README.rdoc", "CHANGES", "COPYING", "samples/README.mutt" ]
-
-  candidates = FileList[
-    'lib/vpim/**/*.rb',
-    'lib/vpim.rb',
-    'bin/*',
-    'samples/*',
-    'test/test_*.rb',
-    'COPYING',
-    'README.rdoc',
-    'CHANGES',
-  ].to_a
-
-  s.files             = candidates
+  s.files             = Dir['lib/vpim/**/*.rb'] + Dir['lib/vpim.rb'] + Dir['bin/*'] + Dir['samples/*'] + Dir['test/test_*.rb'] + Dir['COPYING'] + Dir['README.rdoc'] + Dir['CHANGES']
   s.test_files        = Dir.glob("test/test_*.rb")
-  s.executables       = FileList["bin/*"].map{|path| File.basename(path)}
+
+  #s.executables       = FileList["bin/*"].map{|path| File.basename(path)}
+  #s.executables       = Dir["bin/*"].map{|path| File.basename(path)}
+  s.executables       = []
 
   s.require_path      = "lib"
 # s.add_dependency("plist")
 # s.autorequire       = "vpim"
-  s.add_development_dependency 'rake', '~> 13.0'
 end
